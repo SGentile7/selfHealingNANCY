@@ -767,9 +767,3 @@ print(f"Final Power: {new_obs[0]:.2f}W, Final Tilt: {new_obs[1]:.2f}°, Final Ph
 """# Load NN"""
 
 agent.actor.load_weights('actor.weights.h5')
-agent.target_actor.load_weights('target_actor.weights.h5')
-agent.critic.load_weights('critic.weights.h5')
-agent.target_critic.load_weights('target_critic.weights.h5')
-
-with open('replay_buffer.pkl', 'rb') as f:
-    agent.memory = pickle.load(f)
